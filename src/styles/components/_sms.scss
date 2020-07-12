@@ -10,7 +10,7 @@ $item-margin-vertical: 2rem;
     &__item {
         @include flex(space-between, center);
         flex-direction: column;
-        padding: 4.5rem 2rem;
+        padding: 2.5rem 2rem;
         text-align: center;
         text-decoration: none;
         background-color: #fff;
@@ -18,7 +18,7 @@ $item-margin-vertical: 2rem;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
         margin-right: $item-margin-horizontal;
         min-width: 20rem;
-        min-height: 30rem;
+        min-height: 26rem;
         cursor: pointer;
 
         &-title {
