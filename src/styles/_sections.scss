@@ -1,0 +1,73 @@
+.section {
+    @include flex(center, center);
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 6rem;
+
+    &__container {
+        max-width: 125rem;
+        flex: 1;
+        width: 100%;
+    }
+
+    &__row {
+        @include flex(center, center);
+        flex-wrap: wrap;
+        width: 100%;
+
+        &--fdc {
+            flex-direction: column;
+        }
+    }
+
+    .section__title {
+        position: relative;
+        margin: 6rem 0 3rem;
+        text-align: center;
+        color: #000;
+    }
+
+    h1.section__title {
+        font-weight: 700;
+
+        &:before {
+            top: -25px;
+            left: 50%;
+            position: relative;
+            width: 3.5rem;
+            height: 0.2rem;
+            content: "";
+            display: inherit;
+            background-color: $color-primary;
+            transform: translateX(-50%);
+        }
+    }
+
+    h2.section__title {
+        margin-bottom: 7rem;
+        line-height: 1.1;
+
+        &:after {
+            content: "";
+            bottom: -1.5rem;
+            left: 50%;
+            position: relative;
+            width: 3.5rem;
+            height: 0.2rem;
+            display: inherit;
+            background-color: $color-primary;
+            transform: translateX(-50%);
+        }
+
+        small {
+            font-size: 65%;
+            font-weight: 400;
+            line-height: 1;
+            color: #777;
+        }
+    }
+
+    &--sms-send {
+        background: url('/src/img/bg.webp') bottom/100% auto no-repeat, #fafafa;
+    }
+}

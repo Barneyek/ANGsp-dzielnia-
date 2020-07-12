@@ -1,0 +1,83 @@
+.topbar {
+    padding: 2rem 0 1.3rem;
+    border-bottom: 1px solid #e5e5e5;
+    width: 100%;
+
+    &__wrapper {
+        @include flex(space-between, center);
+        width: 100%;
+        max-width: $content-max-width;
+        margin: 0 auto;
+        letter-spacing: 0.75px;
+    }
+
+    &__left {
+
+        &-user {
+            color: $color-primary;
+            font-weight: 700;
+            text-decoration: underline;
+        }
+    }
+
+    &__left,
+    &__right {
+        font-size: 1.4rem;
+        color: #999;
+    }
+
+    &__right {
+        @include flex(center, center);
+
+        &-points {
+            padding: 0 5rem 0 0.1rem;
+            color: $color-primary;
+            font-weight: 700;
+            letter-spacing: 0;
+
+        }
+
+        &-icons {
+            @include flex(center, center);
+
+            .icons__logout {
+                font-size: 2.4rem;
+                margin-top: 0.2rem;
+            }
+
+            >a {
+                font-size: 2.2rem;
+                color: $color-primary-grey;
+
+                &:hover {
+                    color: $color-primary;
+                }
+
+                &:not(:last-child) {
+                    padding-right: 2.7rem;
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .topbar {
+        &__wrapper {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        &__right {
+            margin-top: 1rem;
+        }
+    }
+}
+
+@include tablet-and-mobile {
+    .topbar {
+        &__wrapper {
+            padding: 0 2rem;
+        }
+    }
+}

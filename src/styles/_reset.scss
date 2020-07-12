@@ -1,0 +1,64 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+}
+
+body{
+  margin: 0;
+}
+
+ul,
+ol,
+li,
+button,
+form,
+input,
+textarea,
+select,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  transition: all 0.3s ease-in;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+button,
+input[type="submit"] {
+  border: 0;
+  cursor: pointer;
+}
+
+select {
+  background-color: transparent;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

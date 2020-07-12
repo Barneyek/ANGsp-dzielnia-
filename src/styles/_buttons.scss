@@ -1,0 +1,98 @@
+$animate-button-time: 0.3s;
+
+.button {
+    transition: $animate-button-time ease all;
+
+    &__circle,
+    &__background {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    &--toggle {
+        position: relative;
+        top: 50%;
+        width: 6.4rem;
+        height: 2.6rem;
+        overflow: hidden;
+
+        .checkbox:checked+.button__circle:before {
+            content: '';
+            left: 40px;
+            background-color: $color-primary;
+        }
+
+        .checkbox:checked~.button__background {
+            background-color: #f0bbc3;
+        }
+    }
+
+    &--toggle,
+    &__background {
+        border-radius: 10rem;
+    }
+
+    .checkbox {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 3;
+    }
+
+    &__circle {
+        z-index: 2;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 5px;
+            width: 2rem;
+            height: 2rem;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1;
+            background-color: #03A9F4;
+            border-radius: 50%;
+            transition: $animate-button-time cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+        }
+    }
+
+    &__background {
+        width: 100%;
+        background-color: #ebf7fc;
+        transition: 0.3s ease all;
+        z-index: 1;
+    }
+
+    &--send {
+        padding: 1.3rem 3.5rem 1.2rem;
+        font-weight: 800;
+        line-height: 1.4rem;
+        text-decoration: none;
+        letter-spacing: 0.75px;
+        border: 0.2rem solid $color-primary;
+        border-radius: 5rem;
+        background: $color-primary;
+        color: #fff;
+        transition: $animate-button-time;
+
+        &:hover {
+           
+            box-shadow: 0 0.9rem 3.2rem 0 rgba(0, 0, 0, .15);
+        }
+    }
+
+    &--upload {
+        display: none;
+    }
+}

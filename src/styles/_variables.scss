@@ -1,0 +1,18 @@
+@import 'mixins';
+
+$color-primary: #e80022;
+$color-primary-grey: #dadada;
+$color-secondary-grey: #959BB0;
+$color-third-grey: #fafafa;
+$color-fourth-grey: #f0f0f0;
+$color-dark-grey: #808080;
+
+$box-shadow-primary: 0 36px 64px 0 rgba(0, 0, 0, .1);
+
+$tablet-width: 768px;
+$desktop-width: 1025px;
+$big-desktop-width: 1280px;
+
+$animate: all 0.2s ease-in-out;
+
+$content-max-width: 117.2rem;

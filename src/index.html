@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ANGspółdzielnia</title>
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css' rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <div class="topbar">
+      <div class="topbar__wrapper">
+        <div class="topbar__left">
+          <span class="topbar__left-login">Zalogowany:
+            <a class="topbar__left-user" href="#">example@example.com</a>
+          </span>
+        </div>
+        <div class="topbar__right">
+          <span class="topbar__right-info">Saldo punktów: <span class="topbar__right-points">500</span></span>
+          <div class="topbar__right-icons icons">
+            <a class="icons__info" href="#">
+              <i class="fas fa-info"></i>
+            </a>
+            <a class="icons__modal" href="#">
+              <i class="fas fa-star"></i>
+            </a>
+            <a class="icons__logout" href="#">
+              <i class="fas fa-sign-out-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="nav">
+      <div class="nav__logo">
+        <img src="./src/img/logo-justsend-top.png" alt="Logo company">
+      </div>
+      <div class="nav__burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav__list">
+        <li><a href="#">Płatności</a></li>
+        <li><a href="#">Moje konto</a></li>
+        <li><a href="#">Raporty</a></li>
+        <li><a href="#">Grupy</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+      <a class="nav__send-sms" href="#">Wyślij SMS</a>
+    </nav>
+  </header>
+  <div class="wrapper">
+    <section class="section section--sms-send sms">
+      <div class="section__container">
+        <div class="section__row">
+          <h1 class="section__title">Utwórz wysyłkę</h1>
+        </div>
+        <div class="section__row">
+          <div class="sms__grid">
+            <a id="sms-basic" class="sms__item sms__item--active">
+              <div class="sms__item-img-wrapper">
+                <img src="./src/img/phone.png" alt="phone icon">
+              </div>
+              <h2 class="sms__item-title">Wyślij SMS BASIC</h2>
+              <p class="sms_item-subtitle">100 SMSów</p>
+            </a>
+            <a id="sms-unique" class="sms__item">
+              <div class="sms__item-img-wrapper">
+                <img src="./src/img/phone-2.png" alt="phone icon">
+              </div>
+              <h2 class="sms__item-title">Wyślij SMS UNIQUE</h2>
+              <p class="sms_item-subtitle">83 SMSów - nadpis rejestrowy</p>
+            </a>
+            <a id="sms-dynamic" class="sms__item">
+              <div class="sms__item-img-wrapper">
+                <img src="./src/img/phone-3.png" alt="phone icon">
+              </div>
+              <h2 class="sms__item-title">Wyślij SMS DYNAMIC</h2>
+              <p class="sms_item-subtitle">71 SMSów - nadpis dynamiczny</p>
+            </a>
+            <a id="sms-voice" class="sms__item">
+              <div class="sms__item-img-wrapper">
+                <img src="./src/img/phone-4.png" alt="phone icon">
+              </div>
+              <h2 class="sms__item-title">Wyślij SMS VOICE</h2>
+              <p class="sms_item-subtitle">71 SMSów</p>
+            </a>
+            <a id="sms-response" class="sms__item">
+              <div class="sms__item-img-wrapper">
+                <img src="./src/img/phone-5.png" alt="phone icon">
+              </div>
+              <h2 class="sms__item-title">Wyślij SMS RESPONSE</h2>
+              <p class="sms_item-subtitle">71 SMSów - ze zbieraniem odpowiedzi</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section--sms-content card">
+      <div class="section__container section__container--sms">
+        <div class="sms__content sms__content--basic">
+          <div class="section__row">
+            <h2 class="section__title">Wyślij SMS BASIC</h2>
+          </div>
+          <div class="section__row section__row--fdc">
+            <div class="card__item">
+              <div class="card__item-left">
+                <div class="card__item-toggle-row">
+                  <label for="personal">Wiadomości spersonalizowane</label>
+                  <div class="button button--toggle">
+                    <input id="personal" type="checkbox" class="checkbox">
+                    <div class="button__circle"></div>
+                    <div class="button__background"></div>
+                  </div>
+                </div>
+                <div class="card__item-toggle-row">
+                  <label for="paramteters">Wiadomości parametryzowane</label>
+                  <div class="button button--toggle">
+                    <input id="paramteters" type="checkbox" class="checkbox">
+                    <div class="button__circle"></div>
+                    <div class="button__background"></div>
+                  </div>
+                </div>
+                <div class="card__item-input">
+                  <label for="name">Nazwa wysyłki</label>
+                  <input type="text" id="name" name="name" required minlength="4" maxlength="30">
+                </div>
+                <div class="card__item-input">
+                  <label for="recipient">Odbiorcy</label>
+                  <input type="text" id="recipient" name="recipient" required minlength="4" maxlength="30">
+                </div>
+                <div class="card__item-button">
+                  <label for="myfile">Plik z bazą numerów (.csv, .txt, .xls, .xlsx, .odt, .ods)</label>
+                  <label for="myfile" class="label--upload">Przeglądaj</label>
+                  <input type="file" id="myfile" name="myfile" class="button--upload">
+                </div>
+                <div class="card__item-input">
+                  <label for="recipient">Grupa numerów</label>
+                  <input type="text" id="recipient" name="recipient" required minlength="4" maxlength="30">
+                </div>
+                <div class="card__item-button">
+                  <label for="group" class="label--upload">Dodaj nową grupę</label>
+                  <input type="file" id="group" name="group" class="button--upload">
+                </div>
+                <label for="cars">Nadawca:</label>
+                <div class="card__item-select">
+                  <select name="cars" id="cars">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                  </select>
+                </div>
+                <div class="card__item-input">
+                  <label for="myfile">Data wysyłki</label>
+                  <input type="date" id="birthday" name="birthday">
+                </div>
+                <div class="card__item-textarea">
+                  <label for="message">Wiadomość:</label>
+                  <textarea id="message" name="message" rows="3" cols="20"></textarea>
+                </div>
+                <div class="card__item-toggle-row">
+                  <label for="polish-chars">Usuwaj polskie znaki</label>
+                  <div class="button button--toggle">
+                    <input id="polish-chars" type="checkbox" class="checkbox">
+                    <div class="button__circle"></div>
+                    <div class="button__background"></div>
+                  </div>
+                </div>
+                <div class="card__item-toggle-row">
+                  <label for="special-chars">Usuwaj znaki specjalne</label>
+                  <div class="button button--toggle">
+                    <input id="special-chars" type="checkbox" class="checkbox">
+                    <div class="button__circle"></div>
+                    <div class="button__background"></div>
+                  </div>
+                </div>
+                <div class="card__item-toggle-row">
+                  <label for="content-theme">Dodaj treść SMS do szablonów</label>
+                  <div class="button button--toggle">
+                    <input id="content-theme" type="checkbox" class="checkbox">
+                    <div class="button__circle"></div>
+                    <div class="button__background"></div>
+                  </div>
+                </div>
+                <div class="card__item-button">
+                  <label for="theme" class="label--upload">Wybierz szablon</label>
+                  <input type="file" id="theme" name="theme" class="button--upload">
+                </div>
+                <div class="card__item-button card__item-button--submit">
+                  <button class="button--send" type="submit" value="Submit">Wyślij</button>
+                </div>
+              </div>
+              <div class="card__item-right">
+                <h3 class="card__item-right-title">Przykład prawidłowego przygotowania pliku bazy numerów</h3>
+                <img src="./src/img/hint-file-personalized.png" alt="photo">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section__container section__container--sms">
+        <div class="sms__content sms__content--unique sms__content--hide">
+          <div class="section__row">
+            <h2 class="section__title">Wyślij SMS UNIQUE<br />
+              <small>z nadpisem rejestrowym</small>
+            </h2>
+          </div>
+          <div class="section__row section__row--fdc">
+            <div class="card__item">
+              <div class="card__item-left">
+                <div class="card__item-toggle-row">
+                  <label for="personal">Wiadomości spersonalizowane</label>
+                  <div class="button button--toggle">
+                    <input id="personal" type="checkbox" class="checkbox">
+                    <div class="button__circle"></div>
+                    <div class="button__background"></div>
+                  </div>
+                </div>
+                <div class="card__item-toggle-row">
+                  <label for="paramteters">Wiadomości parametryzowane</label>
+                  <div class="button button--toggle">
+                    <input id="paramteters" type="checkbox" class="checkbox">
+                    <div class="button__circle"></div>
+                    <div class="button__background"></div>
+                  </div>
+                </div>
+                <div class="card__item-input">
+                  <label for="name">Nazwa wysyłki</label>
+                  <input type="text" id="name" name="name" required minlength="4" maxlength="30">
+                </div>
+                <div class="card__item-input">
+                  <label for="recipient">Odbiorcy</label>
+                  <input type="text" id="recipient" name="recipient" required minlength="4" maxlength="30">
+                </div>
+                <div class="card__item-button">
+                  <label for="myfile">Plik z bazą numerów (.csv, .txt, .xls, .xlsx, .odt, .ods)</label>
+                  <label for="myfile" class="label--upload">Przeglądaj</label>
+                  <input type="file" id="myfile" name="myfile" class="button--upload">
+                </div>
+                <div class="card__item-input">
+                  <label for="recipient">Grupa numerów</label>
+                  <input type="text" id="recipient" name="recipient" required minlength="4" maxlength="30">
+                </div>
+                <div class="card__item-button">
+                  <label for="group" class="label--upload">Dodaj nową grupę</label>
+                  <input type="file" id="group" name="group" class="button--upload">
+                </div>
+                <label for="cars">Nadawca:</label>
+                <div class="card__item-select">
+                  <select name="cars" id="cars">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                  </select>
+                </div>
+                <div class="card__item-input">
+                  <label for="myfile">Data wysyłki</label>
+                  <input type="date" id="birthday" name="birthday">
+                </div>
+                <div class="card__item-textarea">
+                  <label for="message">Wiadomość:</label>
+                  <textarea id="message" name="message" rows="3" cols="20"></textarea>
+                </div>
+                <div class="card__item-toggle-row">
+                  <label for="polish-chars">Usuwaj polskie znaki</label>
+                  <div class="button button--toggle">
+                    <input id="polish-chars" type="checkbox" class="checkbox">
+                    <div class="button__circle"></div>
+                    <div class="button__background"></div>
+                  </div>
+                </div>
+                <div class="card__item-toggle-row">
+                  <label for="special-chars">Usuwaj znaki specjalne</label>
+                  <div class="button button--toggle">
+                    <input id="special-chars" type="checkbox" class="checkbox">
+                    <div class="button__circle"></div>
+                    <div class="button__background"></div>
+                  </div>
+                </div>
+                <div class="card__item-toggle-row">
+                  <label for="content-theme">Dodaj treść SMS do szablonów</label>
+                  <div class="button button--toggle">
+                    <input id="content-theme" type="checkbox" class="checkbox">
+                    <div class="button__circle"></div>
+                    <div class="button__background"></div>
+                  </div>
+                </div>
+                <div class="card__item-button">
+                  <label for="theme" class="label--upload">Wybierz szablon</label>
+                  <input type="file" id="theme" name="theme" class="button--upload">
+                </div>
+                <div class="card__item-button card__item-button--submit">
+                  <button class="button--send" type="submit" value="Submit">Wyślij</button>
+                </div>
+              </div>
+              <div class="card__item-right">
+                <h3 class="card__item-right-title">Przykład prawidłowego przygotowania pliku bazy numerów</h3>
+                <img src="./src/img/hint-file-personalized.png" alt="photo">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section__container section__container--sms">
+        <div class="sms__content sms__content--dynamic sms__content--hide">
+          <div class="section__row">
+            <h2 class="section__title">Wyślij SMS DYNAMIC<br />
+              <small>z nadpisem dynamicznym</small>
+            </h2>
+          </div>
+          <div class="section__row section__row--fdc">
+            <div class="card__item">
+              <div class="card__item-left">
+                <div class="card__item-toggle-row">
+                  <label for="personal">Wiadomości spersonalizowane</label>
+                  <div class="button button--toggle">
+                    <input id="personal" type="checkbox" class="checkbox">
+                    <div class="button__circle"></div>
+                    <div class="button__background"></div>
+                  </div>
+                </div>
+                <div class="card__item-toggle-row">
+                  <label for="paramteters">Wiadomości parametryzowane</label>
+                  <div class="button button--toggle">
+                    <input id="paramteters" type="checkbox" class="checkbox">
+                    <div class="button__circle"></div>
+                    <div class="button__background"></div>
+                  </div>
+                </div>
+                <div class="card__item-input">
+                  <label for="name">Nazwa wysyłki</label>
+                  <input type="text" id="name" name="name" required minlength="4" maxlength="30">
+                </div>
+                <div class="card__item-input">
+                  <label for="recipient">Odbiorcy</label>
+                  <input type="text" id="recipient" name="recipient" required minlength="4" maxlength="30">
+                </div>
+                <div class="card__item-button">
+                  <label for="myfile">Plik z bazą numerów (.csv, .txt, .xls, .xlsx, .odt, .ods)</label>
+                  <label for="myfile" class="label--upload">Przeglądaj</label>
+                  <input type="file" id="myfile" name="myfile" class="button--upload">
+                </div>
+                <div class="card__item-input">
+                  <label for="recipient">Grupa numerów</label>
+                  <input type="text" id="recipient" name="recipient" required minlength="4" maxlength="30">
+                </div>
+                <div class="card__item-button">
+                  <label for="group" class="label--upload">Dodaj nową grupę</label>
+                  <input type="file" id="group" name="group" class="button--upload">
+                </div>
+                <label for="cars">Nadawca:</label>
+                <div class="card__item-select">
+                  <select name="cars" id="cars">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                  </select>
+                </div>
+                <div class="card__item-input">
+                  <label for="myfile">Data wysyłki</label>
+                  <input type="date" id="birthday" name="birthday">
+                </div>
+                <div class="card__item-textarea">
+                  <label for="message">Wiadomość:</label>
+                  <textarea id="message" name="message" rows="3" cols="20"></textarea>
+                </div>
+                <div class="card__item-toggle-row">
+                  <label for="polish-chars">Usuwaj polskie znaki</label>
+                  <div class="button button--toggle">
+                    <input id="polish-chars" type="checkbox" class="checkbox">
+                    <div class="button__circle"></div>
+                    <div class="button__background"></div>
+                  </div>
+                </div>
+                <div class="card__item-toggle-row">
+                  <label for="special-chars">Usuwaj znaki specjalne</label>
+                  <div class="button button--toggle">
+                    <input id="special-chars" type="checkbox" class="checkbox">
+                    <div class="button__circle"></div>
+                    <div class="button__background"></div>
+                  </div>
+                </div>
+                <div class="card__item-toggle-row">
+                  <label for="content-theme">Dodaj treść SMS do szablonów</label>
+                  <div class="button button--toggle">
+                    <input id="content-theme" type="checkbox" class="checkbox">
+                    <div class="button__circle"></div>
+                    <div class="button__background"></div>
+                  </div>
+                </div>
+                <div class="card__item-button">
+                  <label for="theme" class="label--upload">Wybierz szablon</label>
+                  <input type="file" id="theme" name="theme" class="button--upload">
+                </div>
+                <div class="card__item-button card__item-button--submit">
+                  <button class="button--send" type="submit" value="Submit">Wyślij</button>
+                </div>
+              </div>
+              <div class="card__item-right">
+                <h3 class="card__item-right-title">Przykład prawidłowego przygotowania pliku bazy numerów</h3>
+                <img src="./src/img/hint-file-personalized.png" alt="photo">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section__container section__container--sms">
+        <div class="sms__content sms__content--voice sms__content--hide">
+          <div class="section__row">
+            <h2 class="section__title">Wyślij SMS VOICE</h2>
+          </div>
+          <div class="section__row section__row--fdc">
+            <div class="card__item">
+              <div class="card__item-left">
+                <div class="card__item-toggle-row">
+                  <label for="personal">Wiadomości spersonalizowane</label>
+                  <div class="button button--toggle">
+                    <input id="personal" type="checkbox" class="checkbox">
+                    <div class="button__circle"></div>
+                    <div class="button__background"></div>
+                  </div>
+                </div>
+                <div class="card__item-toggle-row">
+                  <label for="paramteters">Wiadomości parametryzowane</label>
+                  <div class="button button--toggle">
+                    <input id="paramteters" type="checkbox" class="checkbox">
+                    <div class="button__circle"></div>
+                    <div class="button__background"></div>
+                  </div>
+                </div>
+                <div class="card__item-input">
+                  <label for="name">Nazwa wysyłki</label>
+                  <input type="text" id="name" name="name" required minlength="4" maxlength="30">
+                </div>
+                <div class="card__item-input">
+                  <label for="recipient">Odbiorcy</label>
+                  <input type="text" id="recipient" name="recipient" required minlength="4" maxlength="30">
+                </div>
+                <div class="card__item-button">
+                  <label for="myfile">Plik z bazą numerów (.csv, .txt, .xls, .xlsx, .odt, .ods)</label>
+                  <label for="myfile" class="label--upload">Przeglądaj</label>
+                  <input type="file" id="myfile" name="myfile" class="button--upload">
+                </div>
+                <div class="card__item-input">
+                  <label for="recipient">Grupa numerów</label>
+                  <input type="text" id="recipient" name="recipient" required minlength="4" maxlength="30">
+                </div>
+                <div class="card__item-button">
+                  <label for="group" class="label--upload">Dodaj nową grupę</label>
+                  <input type="file" id="group" name="group" class="button--upload">
+                </div>
+                <label for="cars">Nadawca:</label>
+                <div class="card__item-select">
+                  <select name="cars" id="cars">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                  </select>
+                </div>
+                <div class="card__item-input">
+                  <label for="myfile">Data wysyłki</label>
+                  <input type="date" id="birthday" name="birthday">
+                </div>
+                <div class="card__item-textarea">
+                  <label for="message">Wiadomość:</label>
+                  <textarea id="message" name="message" rows="3" cols="20"></textarea>
+                </div>
+                <div class="card__item-toggle-row">
+                  <label for="polish-chars">Usuwaj polskie znaki</label>
+                  <div class="button button--toggle">
+                    <input id="polish-chars" type="checkbox" class="checkbox">
+                    <div class="button__circle"></div>
+                    <div class="button__background"></div>
+                  </div>
+                </div>
+                <div class="card__item-toggle-row">
+                  <label for="special-chars">Usuwaj znaki specjalne</label>
+                  <div class="button button--toggle">
+                    <input id="special-chars" type="checkbox" class="checkbox">
+                    <div class="button__circle"></div>
+                    <div class="button__background"></div>
+                  </div>
+                </div>
+                <div class="card__item-toggle-row">
+                  <label for="content-theme">Dodaj treść SMS do szablonów</label>
+                  <div class="button button--toggle">
+                    <input id="content-theme" type="checkbox" class="checkbox">
+                    <div class="button__circle"></div>
+                    <div class="button__background"></div>
+                  </div>
+                </div>
+                <div class="card__item-button">
+                  <label for="theme" class="label--upload">Wybierz szablon</label>
+                  <input type="file" id="theme" name="theme" class="button--upload">
+                </div>
+                <div class="card__item-button card__item-button--submit">
+                  <button class="button--send" type="submit" value="Submit">Wyślij</button>
+                </div>
+              </div>
+              <div class="card__item-right">
+                <h3 class="card__item-right-title">Przykład prawidłowego przygotowania pliku bazy numerów</h3>
+                <img src="./src/img/hint-file-personalized.png" alt="photo">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section__container section__container--sms">
+        <div class="sms__content sms__content--response sms__content--hide">
+          <div class="section__row">
+            <h2 class="section__title">Wyślij SMS RESPONSE <br/>
+            <small>ze zbieraniem odpowiedzi</small></h2>
+          </div>
+          <div class="section__row section__row--fdc">
+            <div class="card__item">
+              <div class="card__item-left">
+                <div class="card__item-toggle-row">
+                  <label for="personal">Wiadomości spersonalizowane</label>
+                  <div class="button button--toggle">
+                    <input id="personal" type="checkbox" class="checkbox">
+                    <div class="button__circle"></div>
+                    <div class="button__background"></div>
+                  </div>
+                </div>
+                <div class="card__item-toggle-row">
+                  <label for="paramteters">Wiadomości parametryzowane</label>
+                  <div class="button button--toggle">
+                    <input id="paramteters" type="checkbox" class="checkbox">
+                    <div class="button__circle"></div>
+                    <div class="button__background"></div>
+                  </div>
+                </div>
+                <div class="card__item-input">
+                  <label for="name">Nazwa wysyłki</label>
+                  <input type="text" id="name" name="name" required minlength="4" maxlength="30">
+                </div>
+                <div class="card__item-input">
+                  <label for="recipient">Odbiorcy</label>
+                  <input type="text" id="recipient" name="recipient" required minlength="4" maxlength="30">
+                </div>
+                <div class="card__item-button">
+                  <label for="myfile">Plik z bazą numerów (.csv, .txt, .xls, .xlsx, .odt, .ods)</label>
+                  <label for="myfile" class="label--upload">Przeglądaj</label>
+                  <input type="file" id="myfile" name="myfile" class="button--upload">
+                </div>
+                <div class="card__item-input">
+                  <label for="recipient">Grupa numerów</label>
+                  <input type="text" id="recipient" name="recipient" required minlength="4" maxlength="30">
+                </div>
+                <div class="card__item-button">
+                  <label for="group" class="label--upload">Dodaj nową grupę</label>
+                  <input type="file" id="group" name="group" class="button--upload">
+                </div>
+                <label for="cars">Nadawca:</label>
+                <div class="card__item-select">
+                  <select name="cars" id="cars">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                  </select>
+                </div>
+                <div class="card__item-input">
+                  <label for="myfile">Data wysyłki</label>
+                  <input type="date" id="birthday" name="birthday">
+                </div>
+                <div class="card__item-textarea">
+                  <label for="message">Wiadomość:</label>
+                  <textarea id="message" name="message" rows="3" cols="20"></textarea>
+                </div>
+                <div class="card__item-toggle-row">
+                  <label for="polish-chars">Usuwaj polskie znaki</label>
+                  <div class="button button--toggle">
+                    <input id="polish-chars" type="checkbox" class="checkbox">
+                    <div class="button__circle"></div>
+                    <div class="button__background"></div>
+                  </div>
+                </div>
+                <div class="card__item-toggle-row">
+                  <label for="special-chars">Usuwaj znaki specjalne</label>
+                  <div class="button button--toggle">
+                    <input id="special-chars" type="checkbox" class="checkbox">
+                    <div class="button__circle"></div>
+                    <div class="button__background"></div>
+                  </div>
+                </div>
+                <div class="card__item-toggle-row">
+                  <label for="content-theme">Dodaj treść SMS do szablonów</label>
+                  <div class="button button--toggle">
+                    <input id="content-theme" type="checkbox" class="checkbox">
+                    <div class="button__circle"></div>
+                    <div class="button__background"></div>
+                  </div>
+                </div>
+                <div class="card__item-button">
+                  <label for="theme" class="label--upload">Wybierz szablon</label>
+                  <input type="file" id="theme" name="theme" class="button--upload">
+                </div>
+                <div class="card__item-button card__item-button--submit">
+                  <button class="button--send" type="submit" value="Submit">Wyślij</button>
+                </div>
+              </div>
+              <div class="card__item-right">
+                <h3 class="card__item-right-title">Przykład prawidłowego przygotowania pliku bazy numerów</h3>
+                <img src="./src/img/hint-file-personalized.png" alt="photo">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="section__row--sms">
+        <div class="sms__content sms__content--unique sms__content--hide">
+          <h1>Personal Inasdsafo</h1>
+          <h2>Full Name</h2>
+          <p>Julie Park <button class="btn">update</button></p>
+          <h2>Birthday</h2>
+          <p>July 21</p>
+          <h2>Gender</h2>
+          <p>Female</p>
+          <h2>Email</h2>
+          <p>example@example.com <button class="btn">update</button></p>
+          <h2>Password </h2>
+          <p>••••••• <button class="btn">Change</button></p>
+        </div>
+        <div class="sms__content sms__content--dynamic sms__content--hide">
+          <h1>Personal test</h1>
+          <h2>Full Name</h2>
+          <p>Julie Park <button class="btn">update</button></p>
+          <h2>Birthday</h2>
+          <p>July 21</p>
+          <h2>Gender</h2>
+          <p>Female</p>
+          <h2>Email</h2>
+          <p>example@example.com <button class="btn">update</button></p>
+          <h2>Password </h2>
+          <p>••••••• <button class="btn">Change</button></p>
+        </div>
+        <div class="sms__content sms__content--voice sms__content--hide">
+          <h2>Full Name</h2>
+          <p>Julie Park <button class="btn">update</button></p>
+          <h2>Birthday</h2>
+          <p>July 21</p>
+          <h2>Gender</h2>
+          <p>Female</p>
+          <h2>Email</h2>
+          <p>example@example.com <button class="btn">update</button></p>
+          <h2>Password </h2>
+          <p>••••••• <button class="btn">Change</button></p>
+        </div>
+        <div class="sms__content sms__content--response sms__content--hide">
+          <h1>Personal Inasdsafo</h1>
+          <h2>Full Name</h2>
+          <p>Julie Park <button class="btn">update</button></p>
+          <h2>Birthday</h2>
+          <p>July 21</p>
+          <h2>Gender</h2>
+          <p>Female</p>
+          <h2>Email</h2>
+          <p>example@example.com <button class="btn">update</button></p>
+          <h2>Password </h2>
+          <p>••••••• <button class="btn">Change</button></p>
+        </div>
+      </div> -->
+  </div>
+  </div>
+  </section>
+  </div>
+</body>
+
+</html>
